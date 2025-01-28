@@ -51,6 +51,17 @@ function App() {
     }
   };
 
+  // Reset the form fields and result
+  const handleReset = () => {
+    setTotalSqft('');
+    setLocation('');
+    setBhk('');
+    setBath('');
+    setEstimatedPrice(null);
+    setError('');
+  };
+
+
   return (
     <div className="App">
       <h1>Home Price Prediction</h1>
@@ -99,6 +110,9 @@ function App() {
         </div>
         <button type="submit">Get Estimated Price</button>
       </form>
+
+      {/* Reset Button */}
+      <button onClick={handleReset} style={{ marginTop: '10px' }}>Reset</button>
 
       {/* Loading Bar */}
       {loading && (

@@ -110,21 +110,39 @@ h3 {
   color: #e74c3c;
   text-align: center;
 }
-
-/* Loading Bar */
 .loading-container {
-  width: 100%;
+  width: 10%;
   max-width: 600px;
-  height: 5px;
-  background-color: #bdc3c7;
+  height: 50px;
+  background-color: #FFFFFF;
   margin-top: 20px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 25px;
+  /* Add this line for rounded corners */
 }
 
 .loading-bar {
   width: 100%;
+  /* Corrected to include px */
   height: 100%;
-  background-color: #512D9A;
+  background-color: #4CAF50;
+  /* Add a color for visibility */
   animation: loading 2s infinite;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@keyframes loading {
+  0% {
+    left: -40px;
+  }
+
+  100% {
+    left: 100%;
+  }
 }
 
 /* Responsive styling */
